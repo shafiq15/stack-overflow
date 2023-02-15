@@ -1,9 +1,9 @@
-import Express  from "express"
+import express from "express"
 
 import { postAnswer, deleteAnswer } from '../controllers/Answers.js'
-import auth from '../middleware/auth.js';
+import auth from '../middleware/auth.js'
 
-const router = Express.Router();
+const router = express.Router();
 
 router.patch('/post/:id', auth, postAnswer)
 router.patch('/delete/:id', auth, deleteAnswer)
